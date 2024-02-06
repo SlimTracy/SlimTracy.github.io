@@ -1,7 +1,13 @@
-.body {
-    font-family: 'Arial', sans-serif;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,79 +19,18 @@ header {
     padding: 1rem;
 }
 
-/* ... Your existing styles ... */
-
-nav {
-    text-align: right; /* Align text to the right */
-}
-
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
-}
-
-nav li {
-    margin-left: 1rem; /* Add some spacing between the links */
+    justify-content: flex-end;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    margin-left: 1rem;
 }
-
-/* ... Your existing styles ... */
-
-
-/* ... Your existing styles ... */
-
-.video-section {
-    padding: 2rem 1rem; /* Adjust padding as needed */
-    text-align: center;
-    background-color: #fff; /* Set background color to white */
-}
-
-/* Style adjustments for left and right videos */
-#left-video {
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-#right-video {
-    float: right;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-/* ... Your existing styles ... */
-
-.video-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-}
-
-/* ... Your existing styles ... */
-
-
-
-
-nav li {
-    margin-right: 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-
 
 .about-section {
     background-color: #f4f4f4;
@@ -95,35 +40,29 @@ nav a {
 
 .profile-content {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .profile-image {
-    width: 150px; /* Set a fixed width for consistency */
-    height: 150px; /* Set a fixed height for consistency */
-    border-radius: 50%; /* Make the image round */
-    overflow: hidden; /* Ensure the image stays within the rounded border */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a more pronounced shadow for depth */
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 .profile-image:hover {
-    transform: scale(1.1); /* Increase the size on hover for a pop effect */
+    transform: scale(1.1);
 }
-
 
 #profile-picture {
-    width: 100%; /* Ensure the image fills its container */
-    height: 100%; /* Ensure the image fills its container */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-
-
-
-
 
 .description {
     text-align: center;
@@ -150,12 +89,11 @@ nav a {
     text-align: center;
 }
 
-.reviews-section {
-    background-color: #f4f4f4;
-    padding: 2rem;
-}
-
-.review {
+.video-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
@@ -164,66 +102,22 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.0rem; 
 }
 
-/* ... Your existing styles ... */
+/* Media queries */
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: center;
+    }
 
-.contact-section {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
+    nav a {
+        margin: 0 0.5rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
 }
 
-.contact-card {
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center;
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-}
-
-.contact-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.profile-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1rem; /* Adjust spacing between image and details */
-}
-
-.contact-details {
-    text-align: center; /* Center the text */
-}
-
-
-.description {
-    text-align: center;
-}
-
-.social-buttons {
-    margin-top: 1rem;
-}
-
-.social-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
