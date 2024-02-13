@@ -66,10 +66,13 @@
 /* SECTION NO 1 */
 
 .section-1 {
-    background-color: #F2F2F2;
+    background-image: url('../images/forestbanner.png'); /* Replace '../images/your-image.jpg' with the correct path to your image */
+    background-size: cover;
+    background-position: center;
     height: 450px;
-    padding: 0px;
+    padding: 0;
 }
+
 
 .section-1-inner-col {
     position: relative;
